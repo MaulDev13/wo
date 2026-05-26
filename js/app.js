@@ -9,8 +9,8 @@
 // import "./features/home.js";
 // import "./features/skill-tree.js";
 
-const VERSION = document.querySelector('meta[name="app-version"]')?.content || '1';
+// const VERSION = document.querySelector('meta[name="app-version"]')?.content || '1';
 
-document.addEventListener('htmx:configRequest', (e) => {
-    e.detail.parameters['v'] = VERSION;
-});
+// document.addEventListener('htmx:configRequest', (e) => {
+//     e.detail.parameters['v'] = VERSION;
+// });
