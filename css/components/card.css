@@ -1,12 +1,17 @@
 /* =========================================================
-   CARD SYSTEM (ONLY BOX SYSTEM)
+   CARD SYSTEM
    ========================================================= */
+
 .card {
 	background: var(--surface);
 	border: 1px solid var(--border);
 	border-radius: var(--radius-md);
 	padding: var(--space-lg);
 	transition: .2s;
+
+	/* Kunci: pastikan card tidak overflow keluar container */
+	min-width: 0;
+	overflow: hidden;
 }
 
 .card-group {

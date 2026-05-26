@@ -1,10 +1,44 @@
 /* =========================================================
-   TABLE (UNIFIED SYSTEM)
+   TABLE WRAPPER
+   ========================================================= */
+
+.table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-sm);
+
+	scrollbar-gutter: stable;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar */
+
+.table-wrapper::-webkit-scrollbar {
+	height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+	background: var(--border-hover);
+	border-radius: 999px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+	background: var(--border-focus);
+}
+
+/* =========================================================
+   TABLE
    ========================================================= */
 
 .table {
 	width: 100%;
-	border-collapse: separate;
+	min-width: max-content;
+
+	border-collapse: collapse;
 	border-spacing: 0;
 
 	font-family: var(--font-sans);
@@ -12,12 +46,6 @@
 	color: var(--text-body);
 
 	background: var(--surface);
-
-	border: 1px solid var(--border);
-	border-radius: var(--radius-lg);
-
-	overflow: hidden;
-	box-shadow: var(--shadow-sm);
 }
 
 /* =========================================================
@@ -26,12 +54,6 @@
 
 .table thead {
 	background: var(--primary-soft);
-}
-
-.table thead tr {
-	position: sticky;
-	top: 0;
-	z-index: 5;
 }
 
 .table th {
@@ -48,8 +70,6 @@
 	color: var(--text-title);
 
 	border-bottom: 1px solid var(--border-focus);
-
-	backdrop-filter: blur(10px);
 
 	transition:
 		background var(--transition-fast),
@@ -100,10 +120,12 @@
 
 .table tbody tr {
 	position: relative;
+
 	transition:
 		background var(--transition-fast),
 		transform var(--transition-fast),
 		opacity var(--transition-fast);
+
 	will-change: transform;
 }
 
@@ -119,7 +141,6 @@
 		color var(--transition-fast);
 }
 
-/* Remove last border */
 .table tbody tr:last-child td {
 	border-bottom: none;
 }
@@ -141,7 +162,7 @@
    ========================================================= */
 
 .table tbody:hover tr {
-	opacity: 0.75;
+	opacity: .75;
 }
 
 .table tbody:hover tr:hover {
@@ -236,10 +257,15 @@
 .table td button {
 	border: none;
 	outline: none;
+
 	background: transparent;
+
 	color: var(--text-meta);
+
 	padding: var(--space-sm) var(--space-md);
+
 	border-radius: var(--radius-sm);
+
 	cursor: pointer;
 
 	transition:
@@ -264,10 +290,14 @@
 .table td input,
 .table td select {
 	width: 100%;
+
 	padding: var(--space-sm) var(--space-md);
+
 	border: 1px solid var(--border);
 	border-radius: var(--radius-sm);
+
 	background: var(--surface);
+
 	font-size: var(--text-sm);
 	color: var(--text-body);
 
@@ -290,7 +320,9 @@
 .table td input[type="checkbox"] {
 	width: 18px;
 	height: 18px;
+
 	accent-color: var(--primary);
+
 	cursor: pointer;
 }
 
@@ -307,6 +339,7 @@
 tr.htmx-swapping {
 	opacity: 0;
 	transform: translateY(4px);
+
 	transition:
 		opacity var(--transition-fast),
 		transform var(--transition-fast);
@@ -333,12 +366,6 @@ tr.htmx-added {
    ========================================================= */
 
 @media (max-width: 768px) {
-
-	.table {
-		display: block;
-		overflow-x: auto;
-		white-space: nowrap;
-	}
 
 	.table th,
 	.table td {
