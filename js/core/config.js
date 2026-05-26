@@ -1,5 +1,4 @@
 // js/core/config.js
-
 window.CONFIG = {
 
     API_BASE: document
