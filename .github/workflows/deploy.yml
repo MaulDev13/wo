@@ -21,9 +21,10 @@ jobs:
           TIMESTAMP=$(date +%s)
           sed -i "s/CACHE_BUST/$TIMESTAMP/" index.html
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add index.html
+          git commit -m "chore: cache bust $TIMESTAMP" || echo "No changes"
+          git push origin main
