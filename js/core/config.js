@@ -5,5 +5,10 @@ window.CONFIG = {
         .querySelector('meta[name="api-base"]')
         ?.getAttribute("content") || "",
 
-    BASE_PATH: ""
+    BASE_PATH :
+        (location.hostname === "localhost" || 
+            location.hostname === "127.0.0.1"
+            ? ""
+            : "/wo/"
+        )
 };
