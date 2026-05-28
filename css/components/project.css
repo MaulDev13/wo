@@ -1,9 +1,16 @@
 /* Project = just card behavior */
+.project-content {
+	width: 100%;
+	min-width: 0;
+}
+
 .project-list {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-md);
 	margin-top: var(--space-md);
+
+	min-width: 0;
 }
 
 .project-item {
@@ -12,6 +19,8 @@
 	border-radius: var(--radius-md);
 	padding: var(--space-md);
 	transition: .2s;
+
+	min-width: 0;
 }
 
 .project-item:hover {
