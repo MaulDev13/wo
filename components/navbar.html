@@ -25,11 +25,27 @@
         </button>
 
         <button class="nav-btn"
+            hx-get="/pages/bmr.html"
+            hx-target="#content"
+            hx-swap="innerHTML"
+            hx-indicator="#loading">
+            BMR
+        </button>
+
+        <button class="nav-btn"
             hx-get="/pages/nutrition.html"
             hx-target="#content"
             hx-swap="innerHTML"
             hx-indicator="#loading">
             Nutrition
+        </button>
+
+        <button class="nav-btn"
+            hx-get="/pages/training-method.html"
+            hx-target="#content"
+            hx-swap="innerHTML"
+            hx-indicator="#loading">
+            Training Method
         </button>
 
         <button class="nav-btn"

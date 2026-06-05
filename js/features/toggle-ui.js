@@ -1,3 +1,33 @@
+// function toggleProject(button, targetId) {
+//     const target = document.getElementById(targetId);
+//     if (!target) return;
+
+//     const isOpen = !target.classList.contains("is-open");
+
+//     // CLOSE ALL PROJECTS
+//     document.querySelectorAll(".project-content")
+//         .forEach(el => el.classList.add("is-open"));
+
+//     // RESET ALL ARROWS
+//     document.querySelectorAll(".arrow")
+//         .forEach(el => el.textContent = "▼");
+
+//     // OPEN CURRENT
+//     if (!isOpen) {
+//         target.classList.remove("is-open");
+//         button.querySelector(".arrow").textContent = "▲";
+
+//         // ✅ smooth scroll to opened content
+//         setTimeout(() => {
+//             target.scrollIntoView({
+//                 behavior: "smooth",
+//                 block: "start"
+//             });
+//         }, 50);
+//     }
+// }
+
+
 function toggleProject(button, targetId) {
     const target = document.getElementById(targetId);
     if (!target) return;

@@ -2,6 +2,11 @@
 .project-content {
 	width: 100%;
 	min-width: 0;
+	transition: max-height .3s ease;
+}
+
+.project-content.is-open {
+    max-height: 500px;
 }
 
 .project-list {

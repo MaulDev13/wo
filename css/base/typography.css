@@ -34,3 +34,65 @@ p {
 	color: var(--text-meta);
 	line-height: var(--leading-normal);
 }
+
+/* =========================================================
+   BLOCKQUOTE
+   ========================================================= */
+
+blockquote {
+	margin: var(--space-lg) 0;
+	padding: var(--space-md) var(--space-lg);
+
+	background: var(--surface-soft);
+
+	border-left: 4px solid var(--primary);
+	border-radius: 0 var(--radius-md) var(--radius-md) 0;
+
+	color: var(--text-body);
+
+	font-size: var(--text-sm);
+	line-height: 1.8;
+
+	position: relative;
+}
+
+/* Decorative quote mark */
+
+blockquote::before {
+	content: "“";
+
+	position: absolute;
+	left: var(--space-md);
+	top: -0.25rem;
+
+	font-size: 3rem;
+	font-weight: var(--font-bold);
+
+	color: var(--primary-soft);
+
+	line-height: 1;
+	pointer-events: none;
+}
+
+/* Spacing for content */
+
+blockquote>*:first-child {
+	margin-top: 0;
+}
+
+blockquote>*:last-child {
+	margin-bottom: 0;
+}
+
+/* Optional emphasis */
+
+blockquote strong {
+	color: var(--text-title);
+}
+
+/* Dark mode compatibility */
+
+[data-theme="dark"] blockquote {
+	background: var(--surface-soft);
+	border-left-color: var(--primary);
+}
