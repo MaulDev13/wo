@@ -1,0 +1,326 @@
+<section id="energy-assessment-page">
+
+  <div class="card-group">
+
+    <!-- Header -->
+    <div class="card">
+      <h1>Energy Requirement Assessment 🔥</h1>
+      <p>Framework perhitungan kebutuhan energi tubuh: BMR, TDEE, defisit, surplus, dan makronutrien.</p>
+      <div style="margin-top: 1rem;">
+        <strong>Goal:</strong> Understand how the body calculates energy needs<br>
+        <strong>Use:</strong> Fat loss, muscle gain, maintenance planning
+      </div>
+    </div>
+
+    <!-- BMR -->
+    <div class="card">
+      <h2>1. Basal Metabolic Rate (BMR) 🧠</h2>
+      <p>BMR adalah jumlah kalori minimum untuk mempertahankan fungsi dasar tubuh saat istirahat total.</p>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Faktor yang mempengaruhi</th>
+            <th>Penjelasan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Usia</td>
+            <td>BMR menurun seiring bertambahnya usia</td>
+          </tr>
+          <tr>
+            <td>Jenis kelamin</td>
+            <td>Pria umumnya memiliki BMR lebih tinggi</td>
+          </tr>
+          <tr>
+            <td>Berat & tinggi badan</td>
+            <td>Semakin besar tubuh, semakin tinggi BMR</td>
+          </tr>
+          <tr>
+            <td>Massa otot</td>
+            <td>Otot meningkatkan BMR secara signifikan</td>
+          </tr>
+          <tr>
+            <td>Hormon & genetik</td>
+            <td>Tiroid dan genetika mempengaruhi metabolisme</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mifflin St Jeor -->
+    <div class="card">
+      <h2>2. Mifflin-St Jeor Formula 📊</h2>
+      <p>Metode paling modern dan paling sering digunakan untuk estimasi BMR.</p>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Jenis</th>
+            <th>Rumus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Laki-laki</td>
+            <td>10 × berat + 6.25 × tinggi − 5 × usia + 5</td>
+          </tr>
+          <tr>
+            <td>Perempuan</td>
+            <td>10 × berat + 6.25 × tinggi − 5 × usia − 161</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Kelebihan:</strong> Akurat untuk mayoritas orang</p>
+      <p><strong>Kekurangan:</strong> Tidak mempertimbangkan body fat secara langsung</p>
+    </div>
+
+    <!-- Harris Benedict -->
+    <div class="card">
+      <h2>3. Harris-Benedict Formula 📉</h2>
+      <p>Metode lama yang masih digunakan di beberapa referensi nutrisi.</p>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Jenis</th>
+            <th>Rumus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Laki-laki</td>
+            <td>66 + (13.7 × berat) + (5 × tinggi) − (6.8 × usia)</td>
+          </tr>
+          <tr>
+            <td>Perempuan</td>
+            <td>655 + (9.6 × berat) + (1.8 × tinggi) − (4.7 × usia)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Kelebihan:</strong> Sederhana dan banyak referensi lama</p>
+      <p><strong>Kekurangan:</strong> Cenderung overestimate kalori</p>
+    </div>
+
+    <!-- Katch McArdle -->
+    <div class="card">
+      <h2>4. Katch-McArdle 🧬</h2>
+      <p>Metode paling akurat untuk individu dengan data body fat dan massa otot.</p>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Rumus</th>
+            <th>Penjelasan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BMR = 370 + (21.6 × LBM)</td>
+            <td>LBM = berat × (1 − body fat %)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Kelebihan:</strong> Akurat untuk atlet / orang berotot</p>
+      <p><strong>Kekurangan:</strong> Butuh data body fat yang akurat</p>
+    </div>
+
+    <!-- TDEE -->
+    <div class="card">
+      <h2>5. Total Daily Energy Expenditure (TDEE) 🔥</h2>
+      <p>TDEE adalah total kalori yang dibakar dalam 1 hari (BMR + semua aktivitas).</p>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Komponen</th>
+            <th>Deskripsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BMR</td>
+            <td>60–70% total kalori harian</td>
+          </tr>
+          <tr>
+            <td>TEF</td>
+            <td>~10% dari kalori makanan</td>
+          </tr>
+          <tr>
+            <td>NEAT</td>
+            <td>Aktivitas harian non-olahraga</td>
+          </tr>
+          <tr>
+            <td>EAT</td>
+            <td>Kalori dari olahraga terstruktur</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Rumus:</strong> TDEE = BMR × faktor aktivitas</p>
+    </div>
+
+    <!-- Activity Factor -->
+    <div class="card">
+      <h2>6. Faktor Aktivitas 📈</h2>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Faktor</th>
+            <th>Deskripsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sangat ringan</td>
+            <td>1.2</td>
+            <td>Kerja duduk, tidak olahraga</td>
+          </tr>
+          <tr>
+            <td>Ringan</td>
+            <td>1.375</td>
+            <td>Olahraga 1–2x/minggu</td>
+          </tr>
+          <tr>
+            <td>Sedang</td>
+            <td>1.55</td>
+            <td>Gym 3–5x/minggu</td>
+          </tr>
+          <tr>
+            <td>Berat</td>
+            <td>1.725</td>
+            <td>Aktif & sering latihan</td>
+          </tr>
+          <tr>
+            <td>Sangat berat</td>
+            <td>1.9</td>
+            <td>Atlet / kerja fisik berat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Deficit & Surplus -->
+    <div class="card">
+      <h2>7. Kalori Defisit & Surplus ⚖️</h2>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Tujuan</th>
+            <th>Formula</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fat Loss</td>
+            <td>−330 kkal (ringan) / −500 kkal (sedang)</td>
+          </tr>
+          <tr>
+            <td>Muscle Gain</td>
+            <td>+150 sampai +350 kkal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Macronutrients -->
+    <div class="card">
+      <h2>8. Makronutrien 🍗🍚🥑</h2>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Makro</th>
+            <th>Fungsi</th>
+            <th>Kalori</th>
+            <th>Contoh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Protein</td>
+            <td>Otot & hormon</td>
+            <td>4 kcal/gram</td>
+            <td>Ayam, telur, ikan, tempe</td>
+          </tr>
+          <tr>
+            <td>Karbohidrat</td>
+            <td>Energi utama</td>
+            <td>4 kcal/gram</td>
+            <td>Nasi, roti, kentang</td>
+          </tr>
+          <tr>
+            <td>Lemak</td>
+            <td>Hormon & energi cadangan</td>
+            <td>9 kcal/gram</td>
+            <td>Alpukat, kacang, minyak zaitun</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Energy Effects -->
+    <div class="card">
+      <h2>9. Energy Effects ⚡</h2>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Efek</th>
+            <th>Penjelasan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NEAT</td>
+            <td>Aktivitas kecil harian (jalan, berdiri)</td>
+          </tr>
+          <tr>
+            <td>TEF</td>
+            <td>Energi untuk mencerna makanan</td>
+          </tr>
+          <tr>
+            <td>EPOC</td>
+            <td>Afterburn setelah latihan intens</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Personal Calculation -->
+    <div class="card">
+      <h2>10. Example Personal Calculation 📌</h2>
+
+      <p><strong>Data:</strong> 64.1 kg, 170 cm, 28 tahun, male, activity factor 1.55</p>
+
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Metode</th>
+            <th>Hasil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mifflin-St Jeor</td>
+            <td>BMR ≈ 1569 kcal → TDEE ≈ 2430–2450 kcal</td>
+          </tr>
+          <tr>
+            <td>Katch-McArdle</td>
+            <td>BMR ≈ 1486 kcal → TDEE ≈ 2300 kcal</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</section>

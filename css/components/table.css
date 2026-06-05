@@ -7,6 +7,7 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 
+	margin-block: var(--space-lg);
 	border: 1px solid var(--border);
 	border-radius: var(--radius-lg);
 	box-shadow: var(--shadow-sm);
@@ -38,6 +39,7 @@
 	width: 100%;
 	min-width: max-content;
 
+	margin-block: var(--space-lg);
 	border-collapse: collapse;
 	border-spacing: 0;
 

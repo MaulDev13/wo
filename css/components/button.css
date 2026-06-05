@@ -15,6 +15,22 @@
 	line-height: 1;
 }
 
+.button-group {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin: var(--space-md) 0;
+    align-items: center;
+
+	min-width: 0;
+	overflow: hidden;
+}
+
+.button + p,
+p + .button {
+    margin-top: var(--space-sm);
+}
+
 .button--primary {
 	background: var(--primary);
 	color: #fff;
@@ -40,6 +56,11 @@
 .button--secondary:hover {
 	background: var(--surface-soft);
 	border-color: var(--primary-soft);
+}
+
+.button--secondary:active {
+	background: var(--primary-active);
+	transform: translateY(0);
 }
 
 .button--ghost {

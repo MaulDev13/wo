@@ -14,130 +14,48 @@
       </div>
     </div>
 
-    <!-- Makronutrien -->
-    <button class="button button--primary"
-      hx-get="/pages/contents/nutrition/macronutrients.html"
-      hx-target="#macronutrients"
-      hx-trigger="click once"
-      hx-swap="innerHTML"
-      onclick="toggleProject(this, 'macronutrients')">
-        <span>Maktronutrien</span>
-        <span class="arrow">▼</span>
-    </button>
-    <div id="macronutrients" class="project-content hidden"></div>
+    <div class="button-group">
 
-    <!-- Mikronutrien -->
-    <button class="button button--primary"
-      hx-get="/pages/contents/nutrition/micronutrients.html"
-      hx-target="#micronutrients"
-      hx-trigger="click once"
-      hx-swap="innerHTML"
-      onclick="toggleProject(this, 'micronutrients')">
-        <span>Miktronutrien</span>
-        <span class="arrow">▼</span>
-    </button>
-    <div id="micronutrients" class="project-content hidden"></div>
+      <!-- Makronutrien -->
+      <button class="button button--primary"
+        hx-get="/pages/contents/nutrition/macronutrients.html"
+        hx-target="#macronutrients"
+        hx-trigger="click once"
+        hx-swap="innerHTML"
+        onclick="toggleProject(this, 'macronutrients')">
+          <span>Maktronutrien</span>
+          <span class="arrow">▼</span>
+      </button>
 
-    <!-- Tabel Kandungan Nutrisi per Makanan -->
-    <button class="button button--primary"
-      hx-get="/pages/contents/nutrition/nutrition-list.html"
-      hx-target="#nutrition-list"
-      hx-trigger="click once"
-      hx-swap="innerHTML"
-      onclick="toggleProject(this, 'nutrition-list')">
-        <span>Daftar Nutrisi</span>
-        <span class="arrow">▼</span>
-    </button>
-    <div id="nutrition-list" class="project-content hidden"></div>
-    
+      <!-- Mikronutrien -->
+      <button class="button button--primary"
+        hx-get="/pages/contents/nutrition/micronutrients.html"
+        hx-target="#micronutrients"
+        hx-trigger="click once"
+        hx-swap="innerHTML"
+        onclick="toggleProject(this, 'micronutrients')">
+          <span>Miktronutrien</span>
+          <span class="arrow">▼</span>
+      </button>
 
-    <!-- Contoh 1 Hari Makan -->
-    <div class="card">
-      <h2>Contoh 1 Hari Makan di Warung Bandung</h2>
-      <p>
-        💡 Kunci: pastikan setiap makan ada <strong>minimal 1 sumber protein</strong>. Ini gap terbesar orang yang makan di warung.
-      </p>
-      <div class="table-wrapper">
-      <table class="table is-striped">
-        <thead>
-          <tr>
-            <th>Waktu</th>
-            <th>Menu</th>
-            <th>Kontribusi Nutrisi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Pagi</strong></td>
-            <td>Nasi + telur dadar 2 butir + tempe goreng + teh manis</td>
-            <td>~50 g protein · ~200 g karbo · vitamin B kompleks</td>
-          </tr>
-          <tr>
-            <td><strong>Siang</strong></td>
-            <td>Nasi + ayam goreng 1 paha + kangkung tumis + lalapan tomat + sambal teri</td>
-            <td>~50-60 g protein · zat besi · kalsium · vitamin C</td>
-          </tr>
-          <tr>
-            <td><strong>Snack Sore</strong></td>
-            <td>Pisang 2 buah + kacang tanah goreng segenggam</td>
-            <td>kalium · magnesium · lemak sehat · ~10 g protein</td>
-          </tr>
-          <tr>
-            <td><strong>Malam</strong></td>
-            <td>Nasi + tongkol goreng + tahu goreng + sayur lodeh</td>
-            <td>~45-50 g protein · vitamin D · kalsium · lemak sehat</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
+      <!-- Tabel Kandungan Nutrisi per Makanan -->
+      <button class="button button--primary"
+        hx-get="/pages/contents/nutrition/nutrition-list.html"
+        hx-target="#nutrition-list"
+        hx-trigger="click once"
+        hx-swap="innerHTML"
+        onclick="toggleProject(this, 'nutrition-list')">
+          <span>Daftar Nutrisi</span>
+          <span class="arrow">▼</span>
+      </button>
+
+      <div id="macronutrients" class="project-content hidden"></div>
+      <div id="micronutrients" class="project-content hidden"></div>
+      <div id="nutrition-list" class="project-content hidden"></div>
+
+    <!-- button group -->
     </div>
-
-    <!-- Progressive Rules Nutrisi -->
-    <div class="card">
-      <h2>Aturan Praktis Nutrisi</h2>
-      <div class="table-wrapper">
-      <table class="table is-striped">
-        <thead>
-          <tr>
-            <th>Situasi</th>
-            <th>Tindakan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Protein kurang di satu makan</td>
-            <td>Tambah lauk — minta ekstra tempe atau telur di warung</td>
-          </tr>
-          <tr>
-            <td>Hari latihan berat (legs / deadlift)</td>
-            <td>Tambah 1 centong nasi ekstra — kebutuhan karbo naik</td>
-          </tr>
-          <tr>
-            <td>Rest day</td>
-            <td>Turunkan karbo sedikit, pertahankan protein — recovery tetap butuh protein</td>
-          </tr>
-          <tr>
-            <td>Setelah latihan (within 1 jam)</td>
-            <td>Makan protein + karbo secepat mungkin — nasi + lauk sudah cukup</td>
-          </tr>
-          <tr>
-            <td><span class="tag">Kram otot sering</span></td>
-            <td>Tambah pisang &amp; kelapa muda — kemungkinan defisiensi kalium/magnesium</td>
-          </tr>
-          <tr>
-            <td><span class="tag">Recovery lambat</span></td>
-            <td>Cek protein total harian &amp; kualitas tidur — dua faktor utama</td>
-          </tr>
-          <tr>
-            <td>Budget terbatas</td>
-            <td>Prioritas: tempe + telur + ikan teri — murah, dense protein &amp; mikro</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
-
-    
+     
     
 
   </div>
