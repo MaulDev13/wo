@@ -1,68 +1,555 @@
-<div class="card">
-      <h2>Mikronutrien Kritis untuk Latihan</h2>
-      <p>⚠️ Jangan skip — kekurangan micronutrients yang sering tidak terasa tapi pengaruh ke recovery &amp; performa.</p>
-      <div class="table-wrapper">
+<!-- ============================================================
+     MIKRONUTRIEN LENGKAP
+     Filter tabs menggunakan script dari skill table interaction
+     ============================================================ -->
+
+<div class="card-group">
+
+  <!-- FILTER TABS -->
+  <div class="card">
+    <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+      <span class="tag active" data-filter="all">Semua</span>
+      <span class="tag" data-filter="vitamin-lemak">Vit. Larut Lemak</span>
+      <span class="tag" data-filter="vitamin-air">Vit. Larut Air</span>
+      <span class="tag" data-filter="mineral-makro">Mineral Makro</span>
+      <span class="tag" data-filter="mineral-mikro">Mineral Mikro</span>
+      <span class="tag" data-filter="elektrolit">Elektrolit</span>
+    </div>
+  </div>
+
+  <!-- TABEL UTAMA -->
+  <div class="card">
+    <div class="table-wrapper">
       <table class="table is-striped">
         <thead>
           <tr>
-            <th>Nutrisi</th>
-            <th>Fungsi Utama</th>
-            <th>Target / Hari</th>
-            <th>Sumber di Warung</th>
-            <th>Estimasi per Porsi</th>
+            <th class="sortable">Nutrisi</th>
+            <th class="sortable">Kategori</th>
+            <th class="sortable">Fungsi Utama</th>
+            <th class="sortable">AKG / Hari</th>
+            <th class="sortable">Jika Kekurangan</th>
+            <th class="sortable">Jika Kelebihan</th>
+            <th class="sortable">Sumber Utama</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- VITAMIN LARUT LEMAK -->
+          <tr data-category="vitamin-lemak">
+            <td><span class="tag is-highlight">Vitamin A</span><br><small>Retinol / Beta-karoten</small></td>
+            <td>Vit. Larut Lemak</td>
+            <td>Kesehatan mata (penglihatan malam), imunitas, pertumbuhan sel, reproduksi, kesehatan kulit</td>
+            <td>700–900 mcg RAE</td>
+            <td>Rabun senja, xerophthalmia, kulit kering, imunitas menurun, pertumbuhan terhambat</td>
+            <td>Sakit kepala, mual, kerusakan hati; teratogenik pada ibu hamil</td>
+            <td>Hati, wortel, ubi jalar, bayam, telur, susu fortifikasi</td>
+          </tr>
+
+          <tr data-category="vitamin-lemak">
+            <td><span class="tag is-highlight">Vitamin D</span><br><small>Kalsiferol</small></td>
+            <td>Vit. Larut Lemak</td>
+            <td>Penyerapan kalsium &amp; fosfor, kesehatan tulang, fungsi imun, regulasi sel</td>
+            <td>600–800 IU (15–20 mcg)</td>
+            <td>Rakhitis (anak), osteomalasia, osteoporosis, risiko infeksi tinggi, depresi</td>
+            <td>Hiperkalsemia, mual, kelemahan otot, kerusakan ginjal, kalsifikasi jaringan lunak</td>
+            <td>Sinar matahari, ikan salmon/makarel/tuna, minyak hati ikan, susu fortifikasi, telur</td>
+          </tr>
+
+          <tr data-category="vitamin-lemak">
+            <td><span class="tag is-highlight">Vitamin E</span><br><small>Tokoferol</small></td>
+            <td>Vit. Larut Lemak</td>
+            <td>Antioksidan kuat, melindungi membran sel, fungsi imun, mencegah pembekuan darah berlebih</td>
+            <td>15 mg</td>
+            <td>Neuropati perifer, anemia hemolitik, gangguan penglihatan, imunitas lemah</td>
+            <td>Mengganggu pembekuan darah, risiko perdarahan, interaksi dengan antikoagulan</td>
+            <td>Minyak nabati (bunga matahari, zaitun), kacang almond, biji bunga matahari, alpukat, bayam</td>
+          </tr>
+
+          <tr data-category="vitamin-lemak">
+            <td><span class="tag is-highlight">Vitamin K</span><br><small>Filokuinon (K1), Menakinon (K2)</small></td>
+            <td>Vit. Larut Lemak</td>
+            <td>Pembekuan darah (koagulasi), kesehatan tulang, regulasi kalsium dalam pembuluh darah</td>
+            <td>90–120 mcg</td>
+            <td>Perdarahan berlebih, mudah memar, pembekuan darah terhambat, risiko osteoporosis</td>
+            <td>Relatif aman dari makanan; suplemen dosis tinggi dapat mengganggu terapi antikoagulan</td>
+            <td>Sayuran hijau (bayam, brokoli, kangkung), kedelai, natto, hati, minyak kanola</td>
+          </tr>
+
+          <!-- VITAMIN LARUT AIR -->
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin C</span><br><small>Asam askorbat</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Sintesis kolagen, antioksidan, penyerapan zat besi non-heme, imunitas, penyembuhan luka</td>
+            <td>75–90 mg</td>
+            <td>Skorbut (gusi berdarah, gigi tanggal), penyembuhan luka lambat, kelelahan, imunitas rendah</td>
+            <td>Diare, mual, batu ginjal oksalat pada dosis sangat tinggi</td>
+            <td>Jambu biji, jeruk, kiwi, stroberi, paprika merah, brokoli, tomat</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B1</span><br><small>Tiamin</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Metabolisme karbohidrat menjadi energi, fungsi saraf dan otot, transmisi sinyal saraf</td>
+            <td>1,1–1,2 mg</td>
+            <td>Beri-beri (kerusakan saraf &amp; jantung), Wernicke-Korsakoff (alkoholisme), kelelahan otot</td>
+            <td>Sangat rendah; kelebihan diekskresi melalui urine; kasus toksisitas sangat jarang</td>
+            <td>Biji-bijian utuh, daging babi, kacang-kacangan, hati, ragi</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B2</span><br><small>Riboflavin</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Metabolisme energi (FAD/FMN), antioksidan, sintesis sel darah merah, kesehatan kulit</td>
+            <td>1,1–1,3 mg</td>
+            <td>Luka sudut mulut (ariboflavinosis), glossitis, dermatitis, mata sensitif cahaya</td>
+            <td>Toksisitas langka; dosis besar dapat membuat urine berwarna kuning cerah</td>
+            <td>Susu, yoghurt, keju, daging, telur, sayuran hijau, almond</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B3</span><br><small>Niasin / Asam nikotinat</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Metabolisme energi (NAD/NADP), sintesis DNA, fungsi saraf, kesehatan kulit</td>
+            <td>14–16 mg NE</td>
+            <td>Pellagra: dermatitis, diare, demensia, depresi (4D)</td>
+            <td>Flushing kulit, mual, kerusakan hati pada dosis sangat tinggi, gula darah naik</td>
+            <td>Daging, ikan tuna/ayam, kacang tanah, biji-bijian utuh, jamur</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B5</span><br><small>Asam pantotenat</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Sintesis Koenzim A, metabolisme lemak &amp; karbohidrat, sintesis hormon steroid &amp; neurotransmiter</td>
+            <td>5 mg</td>
+            <td>Langka; kesemutan tangan-kaki (burning feet syndrome), kelelahan, iritabilitas</td>
+            <td>Diare ringan dan gangguan pencernaan pada dosis sangat tinggi; aman secara umum</td>
+            <td>Daging, hati, jamur, alpukat, brokoli, kentang, telur, susu</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B6</span><br><small>Piridoksin</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Metabolisme protein &amp; asam amino, sintesis neurotransmiter (serotonin, dopamin), pembentukan sel darah merah</td>
+            <td>1,3–1,7 mg</td>
+            <td>Anemia, dermatitis, depresi, kebingungan, imunitas lemah, neuropati perifer</td>
+            <td>Neuropati sensorik permanen (kesemutan, mati rasa) dari suplemen dosis tinggi jangka panjang</td>
+            <td>Daging, ikan, kentang, pisang, biji-bijian utuh, buncis, hati</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B7</span><br><small>Biotin</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Metabolisme lemak, karbohidrat &amp; protein; pertumbuhan rambut &amp; kuku; fungsi saraf</td>
+            <td>30 mcg</td>
+            <td>Rambut rontok, dermatitis, kuku rapuh, depresi, kelelahan; langka pada orang sehat</td>
+            <td>Tidak ada toksisitas diketahui; dapat mengganggu hasil uji laboratorium (tiroid, troponin)</td>
+            <td>Kuning telur, hati, kacang-kacangan, biji bunga matahari, salmon, alpukat</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B9</span><br><small>Folat / Asam folat</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Sintesis DNA &amp; RNA, pembelahan sel, pembentukan sel darah merah, penting untuk kehamilan (neural tube)</td>
+            <td>400 mcg DFE (600 mcg hamil)</td>
+            <td>Anemia megaloblastik, cacat tabung saraf janin (spina bifida), kelelahan, mudah tersinggung</td>
+            <td>Dapat menutupi gejala defisiensi B12; risiko kanker kolorektal pada dosis sangat tinggi (masih diteliti)</td>
+            <td>Bayam, asparagus, kacang-kacangan, hati, jeruk, biji-bijian fortifikasi</td>
+          </tr>
+
+          <tr data-category="vitamin-air">
+            <td><span class="tag is-highlight">Vitamin B12</span><br><small>Kobalamin</small></td>
+            <td>Vit. Larut Air</td>
+            <td>Fungsi saraf, sintesis DNA, pembentukan sel darah merah, metabolisme homosistein</td>
+            <td>2,4 mcg</td>
+            <td>Anemia megaloblastik, neuropati, demensia, glossitis; risiko tinggi pada vegan &amp; lansia</td>
+            <td>Tidak ada batas toleransi atas; kelebihan diekskresi; alergi injeksi sangat langka</td>
+            <td>Daging, ikan, kerang, telur, susu; suplemen/fortifikasi untuk vegan</td>
+          </tr>
+
+          <!-- MINERAL MAKRO -->
+          <tr data-category="mineral-makro">
+            <td><span class="tag is-highlight">Kalsium</span><br><small>Ca</small></td>
+            <td>Mineral Makro</td>
+            <td>Pembentukan tulang &amp; gigi, kontraksi otot, pembekuan darah, transmisi sinyal saraf</td>
+            <td>1000–1200 mg</td>
+            <td>Osteoporosis, tetani otot, tulang rapuh, kejang, tekanan darah tinggi</td>
+            <td>Batu ginjal, konstipasi, hiperkalsemia, menghambat penyerapan besi &amp; zinc, aritmia</td>
+            <td>Susu, yoghurt, keju, ikan teri, brokoli, kedelai, almond, tahu</td>
+          </tr>
+
+          <tr data-category="mineral-makro">
+            <td><span class="tag is-highlight">Fosfor</span><br><small>P</small></td>
+            <td>Mineral Makro</td>
+            <td>Komponen tulang &amp; gigi (bersama kalsium), energi (ATP), buffer pH darah, metabolisme sel</td>
+            <td>700 mg</td>
+            <td>Langka; kelemahan otot, nyeri tulang, gangguan pertumbuhan, kelelahan kronis</td>
+            <td>Mengganggu penyerapan kalsium, hiperfosfatemia (masalah ginjal), kalsifikasi jaringan lunak</td>
+            <td>Daging, ikan, produk susu, kacang-kacangan, biji-bijian</td>
+          </tr>
+
+          <tr data-category="mineral-makro">
+            <td><span class="tag is-highlight">Magnesium</span><br><small>Mg</small></td>
+            <td>Mineral Makro</td>
+            <td>Kofaktor 300+ enzim, fungsi otot &amp; saraf, sintesis protein, regulasi gula darah &amp; tekanan darah</td>
+            <td>310–420 mg</td>
+            <td>Kram otot, tremor, aritmia, migrain, insomnia, kelelahan, kecemasan, resistensi insulin</td>
+            <td>Dari suplemen: diare, mual, hipotensi; dosis sangat tinggi: gangguan ginjal, henti jantung</td>
+            <td>Kacang-kacangan, biji-bijian utuh, sayuran hijau gelap, dark chocolate, alpukat, pisang</td>
+          </tr>
+
+          <!-- ELEKTROLIT -->
+          <tr data-category="elektrolit">
+            <td><span class="tag is-highlight">Natrium</span><br><small>Na</small></td>
+            <td>Elektrolit</td>
+            <td>Keseimbangan cairan ekstraseluler, tekanan darah, transmisi saraf, kontraksi otot</td>
+            <td>&lt;2300 mg (batas atas)</td>
+            <td>Hiponatremia: sakit kepala, mual, kejang, kebingungan mental, koma (jarang)</td>
+            <td>Hipertensi, retensi air, risiko stroke &amp; penyakit jantung, kerusakan ginjal</td>
+            <td>Garam dapur, makanan olahan, saus, mie instan, makanan cepat saji</td>
+          </tr>
+
+          <tr data-category="elektrolit">
+            <td><span class="tag is-highlight">Kalium</span><br><small>K</small></td>
+            <td>Elektrolit</td>
+            <td>Keseimbangan cairan intraseluler, fungsi jantung, kontraksi otot, transmisi saraf</td>
+            <td>2600–3400 mg</td>
+            <td>Hipokalemia: kram, kelelahan otot, aritmia jantung, sembelit, depresi</td>
+            <td>Hiperkalemia: aritmia berbahaya, paralisis otot; risiko pada gangguan ginjal atau suplemen dosis tinggi</td>
+            <td>Pisang, kentang, alpukat, tomat, jeruk, sayuran hijau, kacang-kacangan, susu</td>
+          </tr>
+
+          <tr data-category="elektrolit">
+            <td><span class="tag is-highlight">Klorida</span><br><small>Cl</small></td>
+            <td>Elektrolit</td>
+            <td>Keseimbangan cairan, produksi asam lambung (HCl), transmisi saraf bersama natrium</td>
+            <td>1800–2300 mg</td>
+            <td>Alkalosis metabolik, kehilangan nafsu makan, kelemahan otot; biasanya bersamaan dengan defisiensi natrium</td>
+            <td>Beriringan dengan kelebihan natrium; berkontribusi pada hipertensi</td>
+            <td>Garam dapur, makanan olahan, rumput laut, tomat, selada</td>
+          </tr>
+
+          <!-- MINERAL MIKRO -->
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Zat Besi</span><br><small>Fe</small></td>
+            <td>Mineral Mikro</td>
+            <td>Pembentukan hemoglobin (angkut O₂), mioglobin otot, produksi energi, fungsi imun, perkembangan kognitif</td>
+            <td>8–18 mg (wanita 18 mg, pria 8 mg)</td>
+            <td>Anemia defisiensi besi, kelelahan, penurunan konsentrasi, pucat, rambut rontok, imunitas lemah</td>
+            <td>Hemokromatosis: kerusakan hati, jantung, diabetes; overdosis akut berbahaya pada anak-anak</td>
+            <td>Daging merah, hati, kerang, tempe, bayam, kacang-kacangan, biji-bijian fortifikasi</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Seng (Zinc)</span><br><small>Zn</small></td>
+            <td>Mineral Mikro</td>
+            <td>Fungsi imun, sintesis protein &amp; DNA, penyembuhan luka, indera rasa &amp; bau, pertumbuhan, reproduksi</td>
+            <td>8–11 mg</td>
+            <td>Pertumbuhan terhambat, imunitas lemah, rambut rontok, luka lambat sembuh, gangguan penciuman</td>
+            <td>Mual, muntah, menekan penyerapan tembaga, mengganggu imunitas jangka panjang</td>
+            <td>Tiram/kerang, daging merah, unggas, kacang-kacangan, biji labu, susu, gandum utuh</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Tembaga</span><br><small>Cu</small></td>
+            <td>Mineral Mikro</td>
+            <td>Metabolisme besi, pembentukan kolagen, fungsi saraf, antioksidan (SOD), produksi energi</td>
+            <td>900 mcg</td>
+            <td>Anemia, osteoporosis, neuropati, depigmentasi rambut/kulit, imunitas turun</td>
+            <td>Penyakit Wilson, kerusakan hati, mual, sakit perut; toksisitas dari kontaminasi air/wadah tembaga</td>
+            <td>Hati, kerang, biji-bijian, kacang mete, cokelat hitam, jamur, alpukat</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Mangan</span><br><small>Mn</small></td>
+            <td>Mineral Mikro</td>
+            <td>Pembentukan tulang, metabolisme karbohidrat &amp; asam amino, antioksidan (MnSOD), pembekuan darah</td>
+            <td>1,8–2,3 mg</td>
+            <td>Langka; gangguan pertumbuhan tulang, gangguan metabolisme, disfungsi reproduksi</td>
+            <td>Manganisme (mirip Parkinson): tremor, kaku otot, gangguan kognitif; risiko dari paparan industri</td>
+            <td>Kacang-kacangan, biji-bijian utuh, sayuran hijau, teh, nanas, beras merah</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Selenium</span><br><small>Se</small></td>
+            <td>Mineral Mikro</td>
+            <td>Antioksidan (glutathione peroxidase), fungsi tiroid, imunitas, perlindungan DNA, reproduksi pria</td>
+            <td>55 mcg</td>
+            <td>Penyakit Keshan (kardiomiopati), Kashin-Beck (penyakit sendi), hipotiroidisme, imunitas lemah</td>
+            <td>Selenosis: rambut/kuku rontok, bau bawang putih di napas, gangguan saraf, mual, kelelahan</td>
+            <td>Kacang Brazil (1 butir ≈ 70–90 mcg!), tuna/salmon, daging, telur, biji bunga matahari</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Yodium</span><br><small>I</small></td>
+            <td>Mineral Mikro</td>
+            <td>Sintesis hormon tiroid (T3 &amp; T4) yang mengatur metabolisme, pertumbuhan, dan perkembangan otak</td>
+            <td>150 mcg (220–290 mcg hamil/menyusui)</td>
+            <td>Gondok, hipotiroidisme, kretinisme (bayi), gangguan kognitif, kelelahan kronis</td>
+            <td>Hipertiroidisme atau hipotiroidisme paradoks, tiroiditis, memicu penyakit tiroid autoimun</td>
+            <td>Rumput laut, ikan laut, garam beryodium, produk susu, telur</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Fluorida</span><br><small>F</small></td>
+            <td>Mineral Mikro</td>
+            <td>Penguatan email gigi, pencegahan karies, penguatan tulang; penting pada masa pertumbuhan gigi</td>
+            <td>3–4 mg</td>
+            <td>Karies gigi meningkat, email gigi lemah, risiko osteoporosis lebih tinggi</td>
+            <td>Fluorosis gigi (bercak/bintik pada gigi); fluorosis tulang pada dosis sangat tinggi jangka panjang</td>
+            <td>Air minum terfluoridasi, pasta gigi, teh, ikan, sayuran di tanah kaya fluor</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Kromium</span><br><small>Cr</small></td>
+            <td>Mineral Mikro</td>
+            <td>Meningkatkan kerja insulin, metabolisme glukosa &amp; lipid, regulasi gula darah</td>
+            <td>25–35 mcg</td>
+            <td>Resistensi insulin, gangguan metabolisme glukosa, profil lipid memburuk</td>
+            <td>Cr³⁺ (trivalen) relatif aman; Cr⁶⁺ (heksavalen) bersifat toksik &amp; karsinogenik</td>
+            <td>Daging, brokoli, biji-bijian, kacang-kacangan, kuning telur, ragi bir</td>
+          </tr>
+
+          <tr data-category="mineral-mikro">
+            <td><span class="tag is-highlight">Molibdenum</span><br><small>Mo</small></td>
+            <td>Mineral Mikro</td>
+            <td>Kofaktor enzim metabolisme asam amino (xantin oksidase), pengolahan purin &amp; sulfit</td>
+            <td>45 mcg</td>
+            <td>Sangat langka; gangguan metabolisme sulfit (kasus bawaan atau TPN jangka panjang)</td>
+            <td>Langka dari makanan; dosis sangat tinggi dapat mengganggu metabolisme tembaga dan memicu asam urat</td>
+            <td>Kacang-kacangan, biji-bijian, hati, sayuran polong, produk susu</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:1rem; font-size:0.8rem; opacity:0.6;">
+      AKG = Angka Kecukupan Gizi. Nilai berdasarkan rekomendasi dewasa sehat (19–49 tahun).
+      Kebutuhan bervariasi berdasarkan usia, jenis kelamin, kondisi kesehatan, dan kehamilan.
+    </p>
+  </div>
+
+  <!-- CATATAN INTERAKSI ANTAR NUTRISI -->
+  <div class="card">
+    <h3>Interaksi Penting Antar Nutrisi</h3>
+    <div class="table-wrapper">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th class="sortable">Kombinasi</th>
+            <th class="sortable">Efek</th>
+            <th class="sortable">Catatan Praktis</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><span class="tag">Zat Besi</span></td>
-            <td>Transport oksigen ke otot, cegah anemia</td>
-            <td>8–11 mg</td>
-            <td>Hati ayam, tempe, kangkung, bayam, teri</td>
-            <td>Hati ayam goreng 1 porsi ≈ 8–9 mg · Kangkung tumis ≈ 2–3 mg</td>
+            <td>Vitamin C + Zat Besi</td>
+            <td>Vitamin C meningkatkan penyerapan zat besi non-heme (nabati) hingga 3×</td>
+            <td>Konsumsi bayam/tempe bersama jeruk atau paprika</td>
           </tr>
           <tr>
-            <td><span class="tag">Kalsium</span></td>
-            <td>Kepadatan tulang, kontraksi otot</td>
-            <td>~1000 mg</td>
-            <td>Ikan teri, tahu putih, sayur hijau</td>
-            <td>Teri goreng 2 sdm ≈ 150–200 mg · Tahu 1 potong besar ≈ 80–100 mg</td>
+            <td>Vitamin D + Kalsium</td>
+            <td>Vitamin D wajib ada agar kalsium dapat diserap usus secara optimal</td>
+            <td>Suplementasi kalsium tanpa Vitamin D kurang efektif</td>
           </tr>
           <tr>
-            <td><span class="tag">Magnesium</span></td>
-            <td>Sintesis protein, fungsi otot &amp; saraf, tidur</td>
-            <td>~400 mg</td>
-            <td>Tempe, kacang hijau, bayam, pisang</td>
-            <td>Tempe 1 potong ≈ 25–30 mg · Pisang 1 buah ≈ 30–35 mg</td>
+            <td>Kalsium (dosis tinggi) + Zat Besi</td>
+            <td>Kalsium menghambat penyerapan zat besi jika dikonsumsi bersamaan</td>
+            <td>Beri jarak konsumsi suplemen kalsium dan zat besi minimal 2 jam</td>
           </tr>
           <tr>
-            <td><span class="tag">Kalium</span></td>
-            <td>Elektrolit, cegah kram, keseimbangan cairan</td>
-            <td>~3500 mg</td>
-            <td>Pisang, kentang, bayam, ubi, kelapa muda</td>
-            <td>Pisang 1 buah ≈ 420 mg · Kelapa muda 1 buah ≈ 600 mg · Kentang kukus ≈ 500 mg</td>
+            <td>Zinc + Tembaga</td>
+            <td>Zinc dosis tinggi menekan penyerapan tembaga</td>
+            <td>Suplemen zinc jangka panjang perlu diimbangi asupan tembaga</td>
           </tr>
           <tr>
-            <td><span class="tag">Vitamin D</span></td>
-            <td>Absorpsi kalsium, fungsi imun, testosteron</td>
-            <td>~1000–2000 IU</td>
-            <td>Tongkol, kembung, telur, sinar matahari pagi</td>
-            <td>Tongkol goreng 1 ekor ≈ 200–400 IU · Matahari pagi 15–20 mnt ≈ 400–1000 IU</td>
+            <td>Vitamin K + Antikoagulan (Warfarin)</td>
+            <td>Vitamin K mengurangi efektivitas warfarin</td>
+            <td>Pasien antikoagulan harus menjaga konsistensi asupan sayuran hijau</td>
           </tr>
           <tr>
-            <td><span class="tag">Zinc</span></td>
-            <td>Sintesis testosteron, imunitas, recovery</td>
-            <td>~11 mg</td>
-            <td>Tempe, daging sapi, hati ayam, kacang-kacangan</td>
-            <td>Tempe goreng 2 potong ≈ 2–3 mg · Empal sapi 1 potong ≈ 4–5 mg</td>
+            <td>Folat (B9) + Vitamin B12</td>
+            <td>Folat tinggi dapat menutupi gejala defisiensi B12 yang sebenarnya serius</td>
+            <td>Vegan disarankan cek kadar B12 secara berkala</td>
           </tr>
           <tr>
-            <td><span class="tag">Vitamin C</span></td>
-            <td>Kolagen, absorpsi zat besi, antioksidan</td>
-            <td>~90 mg</td>
-            <td>Lalapan tomat &amp; timun, jeruk, cabai rawit</td>
-            <td>Jeruk 1 buah ≈ 50–70 mg · Tomat 1 buah ≈ 20–25 mg · Cabai rawit 5 biji ≈ 15 mg</td>
+            <td>Magnesium + Vitamin D</td>
+            <td>Magnesium diperlukan untuk mengaktifkan Vitamin D di dalam tubuh</td>
+            <td>Defisiensi magnesium dapat membuat suplementasi Vitamin D tidak optimal</td>
           </tr>
         </tbody>
       </table>
-      </div>
     </div>
+  </div>
+
+  <!-- CATATAN PENUTUP -->
+  <div class="card card--soft">
+    <blockquote>
+      Sebagian besar kebutuhan mikronutrien dapat dipenuhi dengan mengonsumsi makanan yang beragam —
+      terutama buah-buahan, sayuran berwarna, biji-bijian utuh, kacang-kacangan, serta sumber protein
+      hewani maupun nabati. Semakin beragam warna dan jenis makanan yang dikonsumsi, semakin besar
+      peluang kebutuhan vitamin dan mineral terpenuhi. Suplementasi dianjurkan hanya bila ada defisiensi
+      yang terdiagnosis atau kondisi khusus (kehamilan, vegan ketat, lansia), dan sebaiknya di bawah
+      pengawasan tenaga kesehatan.
+    </blockquote>
+  </div>
+
+</div>
+
+<!-- <script src="../js/features/table.js"></script> -->
+
+<!-- ============================================================
+     SCRIPT: Table Interaction (Sort + Filter via .tag)
+     Sumber: skill table interaction
+     ============================================================ -->
+<script>
+(() => {
+
+  const table = document.querySelector("table");
+  if (!table) return;
+
+  const tbody = table.querySelector("tbody");
+  let rows = [...tbody.querySelectorAll("tr")];
+  const tabs = [...document.querySelectorAll(".tag")];
+  const headers = [...table.querySelectorAll("th.sortable")];
+
+  let selectedRowIndex = -1;
+  let currentSort = { index: 0, direction: "asc" };
+  let currentFilter = "all";
+
+  function refreshRows() {
+    rows = [...tbody.querySelectorAll("tr")];
+  }
+
+  function getCellValue(row, index) {
+    return row.children[index]?.innerText.trim().toLowerCase() || "";
+  }
+
+  function getVisibleRows() {
+    return rows.filter(row => row.style.display !== "none");
+  }
+
+  /* SORT */
+  function sortTable(index, direction = "asc") {
+    refreshRows();
+    const sorted = [...rows].sort((a, b) => {
+      const A = getCellValue(a, index);
+      const B = getCellValue(b, index);
+      const isNumeric = !isNaN(A) && !isNaN(B);
+      if (isNumeric) {
+        return direction === "asc" ? Number(A) - Number(B) : Number(B) - Number(A);
+      }
+      return direction === "asc" ? A.localeCompare(B) : B.localeCompare(A);
+    });
+    tbody.innerHTML = "";
+    sorted.forEach(row => tbody.appendChild(row));
+    refreshRows();
+  }
+
+  headers.forEach((header, index) => {
+    header.addEventListener("click", () => {
+      headers.forEach(th => th.classList.remove("asc", "desc"));
+      const direction =
+        currentSort.index === index && currentSort.direction === "asc" ? "desc" : "asc";
+      currentSort = { index, direction };
+      header.classList.add(direction);
+      sortTable(index, direction);
+    });
+  });
+
+  /* FILTER */
+  function applyFilter(filter) {
+    currentFilter = filter;
+    rows.forEach(row => {
+      const category = row.dataset.category || "";
+      const level = row.dataset.level || "";
+      let visible = false;
+      if (filter === "all") visible = true;
+      else if (category === filter || level === filter) visible = true;
+      row.style.display = visible ? "" : "none";
+    });
+    selectedRowIndex = -1;
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(btn => btn.classList.remove("active"));
+      tab.classList.add("active");
+      applyFilter(tab.dataset.filter);
+    });
+  });
+
+  /* ROW SELECT */
+  function clearSelection() {
+    rows.forEach(row => row.classList.remove("selected"));
+  }
+
+  function selectRow(index) {
+    const visibleRows = getVisibleRows();
+    const row = visibleRows[index];
+    if (!row) return;
+    clearSelection();
+    row.classList.add("selected");
+    selectedRowIndex = index;
+    row.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+
+  function bindRowEvents() {
+    refreshRows();
+    rows.forEach(row => {
+      row.setAttribute("tabindex", "0");
+      row.addEventListener("click", () => {
+        const visibleRows = getVisibleRows();
+        const index = visibleRows.indexOf(row);
+        selectRow(index);
+      });
+      row.addEventListener("dblclick", () => {
+        console.log("Open detail:", row.children[0]?.innerText);
+      });
+    });
+  }
+
+  bindRowEvents();
+
+  /* KEYBOARD NAVIGATION */
+  document.addEventListener("keydown", (e) => {
+    const active = document.activeElement.tagName;
+    if (active === "INPUT" || active === "TEXTAREA" || active === "SELECT") return;
+    const visibleRows = getVisibleRows();
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        selectedRowIndex = Math.min(selectedRowIndex + 1, visibleRows.length - 1);
+        selectRow(selectedRowIndex);
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        selectedRowIndex = Math.max(selectedRowIndex - 1, 0);
+        selectRow(selectedRowIndex);
+        break;
+      case "Escape":
+        clearSelection();
+        selectedRowIndex = -1;
+        break;
+      case "Enter":
+        if (selectedRowIndex >= 0 && visibleRows[selectedRowIndex]) {
+          visibleRows[selectedRowIndex].dispatchEvent(new Event("dblclick"));
+        }
+        break;
+    }
+  });
+
+  /* DEFAULT SORT */
+  sortTable(currentSort.index, currentSort.direction);
+  headers[0].classList.add("asc");
+
+  /* HTMX SUPPORT */
+  document.body.addEventListener("htmx:afterSwap", () => {
+    refreshRows();
+    bindRowEvents();
+    applyFilter(currentFilter);
+    sortTable(currentSort.index, currentSort.direction);
+  });
+
+})();
+</script>

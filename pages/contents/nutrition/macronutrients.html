@@ -1,65 +1,360 @@
+<!-- ============================================================
+     MAKRONUTRIEN LENGKAP
+     Filter tabs menggunakan script dari skill table interaction
+     ============================================================ -->
+
 <div class="card-group">
+
+  <!-- INTRO -->
   <div class="card">
     <h2>Makronutrien</h2>
-
     <p>
-      Makronutrien adalah zat gizi yang dibutuhkan tubuh dalam jumlah besar
-      untuk menghasilkan energi, membangun jaringan tubuh, dan menjaga
-      berbagai fungsi biologis. Terdapat tiga makronutrien utama:
-      protein, karbohidrat, dan lemak.
+      Makronutrien adalah zat gizi yang dibutuhkan tubuh dalam jumlah besar untuk
+      menghasilkan energi, membangun jaringan tubuh, dan menjaga berbagai fungsi
+      biologis. Ada tiga makronutrien utama — protein, karbohidrat, dan lemak —
+      masing-masing dengan subtipe, fungsi spesifik, dan dampak kesehatan yang berbeda.
     </p>
+  </div>
 
+  <!-- ============================================================
+       TABEL 1: PROTEIN — SUBTIPE LENGKAP
+       ============================================================ -->
+  <div class="card">
+    <h3>Protein</h3>
+    <p>
+      Protein tersusun dari asam amino. Dari 20 asam amino yang dikenal, 9 di antaranya
+      bersifat esensial — tidak dapat dibuat tubuh dan harus diperoleh dari makanan.
+      Protein hewani umumnya mengandung semua asam amino esensial (protein lengkap),
+      sedangkan sebagian besar protein nabati bersifat tidak lengkap.
+    </p>
+    <p><strong>4 kkal per gram</strong></p>
     <div class="table-wrapper">
       <table class="table is-striped">
         <thead>
           <tr>
-            <th>Makronutrien</th>
-            <th>Fungsi Utama</th>
-            <th>Energi</th>
-            <th>Sumber Umum</th>
+            <th class="sortable">Jenis / Sumber</th>
+            <th class="sortable">Karakteristik</th>
+            <th class="sortable">Keunggulan</th>
+            <th class="sortable">Perhatian</th>
+            <th class="sortable">Contoh</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><span class="tag is-highlight">Protein</span></td>
-            <td>Membangun dan memperbaiki jaringan tubuh, otot, enzim, hormon.</td>
-            <td>4 kkal / gram</td>
-            <td>Ayam, ikan, telur, susu, tahu, tempe.</td>
+            <td><span class="tag is-highlight">Protein Hewani</span></td>
+            <td>Mengandung semua 9 asam amino esensial (protein lengkap), bioavailabilitas tinggi</td>
+            <td>Paling efisien untuk sintesis otot dan perbaikan jaringan</td>
+            <td>Beberapa sumber tinggi lemak jenuh (daging merah berlemak), risiko kolesterol</td>
+            <td>Ayam, ikan, telur, susu, daging sapi, udang, keju</td>
           </tr>
-
           <tr>
-            <td><span class="tag is-highlight">Karbohidrat</span></td>
-            <td>Sumber energi utama untuk aktivitas fisik dan mental.</td>
-            <td>4 kkal / gram</td>
-            <td>Nasi, roti, kentang, jagung, oatmeal, singkong.</td>
+            <td><span class="tag is-highlight">Protein Nabati</span></td>
+            <td>Umumnya tidak lengkap; perlu kombinasi sumber berbeda untuk asupan asam amino optimal</td>
+            <td>Kaya serat, rendah lemak jenuh, mengandung fitonutrien</td>
+            <td>Perlu dikombinasikan (mis. nasi + kacang) agar profil asam amino lengkap</td>
+            <td>Tahu, tempe, kedelai, kacang merah, lentil, edamame</td>
           </tr>
-
           <tr>
-            <td><span class="tag is-highlight">Lemak</span></td>
-            <td>Cadangan energi, produksi hormon, dan penyerapan vitamin.</td>
-            <td>9 kkal / gram</td>
-            <td>Alpukat, kacang-kacangan, santan, telur, ikan.</td>
+            <td><span class="tag is-highlight">Protein Lengkap Nabati</span></td>
+            <td>Protein nabati yang secara alami mengandung semua asam amino esensial</td>
+            <td>Pilihan ideal untuk vegan tanpa perlu kombinasi rumit</td>
+            <td>Ketersediaan terbatas, harga relatif lebih tinggi</td>
+            <td>Kedelai/edamame, quinoa, amaranth, buckwheat, spirulina</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Whey Protein</span></td>
+            <td>Protein cepat serap dari susu, BCAA tinggi (leucine, isoleucine, valine)</td>
+            <td>Ideal dikonsumsi setelah latihan untuk pemulihan otot</td>
+            <td>Tidak cocok untuk intoleransi laktosa; suplemen, bukan makanan utama</td>
+            <td>Suplemen whey concentrate, isolate, hydrolysate</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Kasein Protein</span></td>
+            <td>Protein lambat serap dari susu, membentuk gel di perut</td>
+            <td>Baik dikonsumsi malam hari untuk pemulihan semalam</td>
+            <td>Tidak cocok untuk intoleransi laktosa</td>
+            <td>Keju cottage, susu, suplemen kasein</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin-top:1.5rem;">Kebutuhan Protein Berdasarkan Usia &amp; Aktivitas</h4>
+    <div class="table-wrapper">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th class="sortable">Kelompok</th>
+            <th class="sortable">Rekomendasi (per kg BB)</th>
+            <th class="sortable">Contoh (BB 60 kg)</th>
+            <th>Catatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anak (4–13 tahun)</td>
+            <td>0,95 g/kg</td>
+            <td>±57 g/hari</td>
+            <td>Penting untuk pertumbuhan dan perkembangan otak</td>
+          </tr>
+          <tr>
+            <td>Remaja (14–18 tahun)</td>
+            <td>0,85 g/kg</td>
+            <td>±51 g/hari</td>
+            <td>Lonjakan pertumbuhan tulang dan otot</td>
+          </tr>
+          <tr>
+            <td>Dewasa Sedentary</td>
+            <td>0,8 g/kg</td>
+            <td>±48 g/hari</td>
+            <td>Kebutuhan minimum untuk pemeliharaan jaringan</td>
+          </tr>
+          <tr>
+            <td>Olahraga Rekreasi</td>
+            <td>1,2–1,6 g/kg</td>
+            <td>72–96 g/hari</td>
+            <td>Aktivitas aerobik/rekreasi 3–5×/minggu</td>
+          </tr>
+          <tr>
+            <td>Latihan Beban Intensif</td>
+            <td>1,6–2,2 g/kg</td>
+            <td>96–132 g/hari</td>
+            <td>Hypertrophy atau rekomposisi tubuh</td>
+          </tr>
+          <tr>
+            <td>Atlet Daya Tahan</td>
+            <td>1,2–1,6 g/kg</td>
+            <td>72–96 g/hari</td>
+            <td>Marathon, bersepeda, triathlon</td>
+          </tr>
+          <tr>
+            <td>Ibu Hamil</td>
+            <td>+25 g/hari tambahan</td>
+            <td>±75–100 g/hari</td>
+            <td>Perkembangan janin dan plasenta</td>
+          </tr>
+          <tr>
+            <td>Ibu Menyusui</td>
+            <td>+20 g/hari tambahan</td>
+            <td>±70–95 g/hari</td>
+            <td>Produksi ASI berkualitas</td>
+          </tr>
+          <tr>
+            <td>Lansia (&gt;65 tahun)</td>
+            <td>1,0–1,2 g/kg</td>
+            <td>60–72 g/hari</td>
+            <td>Mencegah sarcopenia (kehilangan massa otot)</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
+  <!-- ============================================================
+       TABEL 2: KARBOHIDRAT — SUBTIPE LENGKAP
+       ============================================================ -->
   <div class="card">
-
-    <h3>Distribusi Makronutrien yang Direkomendasikan</h3>
-
+    <h3>Karbohidrat</h3>
     <p>
-      Setelah mengetahui kebutuhan kalori harian (TDEE), kalori tersebut
-      dapat dibagi ke dalam tiga makronutrien berikut.
+      Karbohidrat adalah sumber energi utama tubuh, terutama untuk otak dan aktivitas
+      intensitas tinggi. Karbohidrat dibagi menjadi sederhana (cepat dicerna) dan
+      kompleks (lambat dicerna). Serat, meski secara teknis karbohidrat, tidak dicerna
+      dan memiliki peran tersendiri dalam kesehatan pencernaan.
     </p>
+    <p><strong>4 kkal per gram</strong> (serat: ~2 kkal per gram, sebagian besar tidak diserap)</p>
 
     <div class="table-wrapper">
       <table class="table is-striped">
         <thead>
           <tr>
+            <th class="sortable">Jenis</th>
+            <th class="sortable">Indeks Glikemik</th>
+            <th class="sortable">Karakteristik</th>
+            <th class="sortable">Dampak Positif</th>
+            <th class="sortable">Perhatian</th>
+            <th class="sortable">Contoh Makanan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag is-highlight">Gula Sederhana</span></td>
+            <td>Tinggi (70–100)</td>
+            <td>Dicerna dan diserap sangat cepat; lonjakan gula darah tajam</td>
+            <td>Pemulihan cepat pasca olahraga intensif; energi instan darurat</td>
+            <td>Risiko resistensi insulin, karies gigi, fluktuasi energi, penambahan berat badan</td>
+            <td>Gula pasir, madu, sirup, minuman manis, permen, buah kaleng bergula</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Pati / Karbohidrat Kompleks</span></td>
+            <td>Sedang (40–70)</td>
+            <td>Dicerna bertahap; energi stabil lebih lama</td>
+            <td>Energi tahan lama, mendukung performa olahraga, lebih mengenyangkan</td>
+            <td>Porsi berlebih tetap meningkatkan kalori total; pilih versi utuh</td>
+            <td>Nasi, kentang, roti, pasta, jagung, singkong, oatmeal</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Karbohidrat Utuh (Whole)</span></td>
+            <td>Rendah–Sedang (20–55)</td>
+            <td>Mengandung serat, vitamin, mineral; pemrosesan minimal</td>
+            <td>Mendukung kesehatan jantung, gula darah stabil, kenyang lebih lama</td>
+            <td>Perlu persiapan lebih; harga bisa lebih tinggi</td>
+            <td>Beras merah, quinoa, roti gandum utuh, oats, ubi, kacang polong</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Serat Larut</span></td>
+            <td>Sangat rendah</td>
+            <td>Larut dalam air, membentuk gel; memperlambat penyerapan glukosa &amp; kolesterol</td>
+            <td>Menurunkan LDL, menstabilkan gula darah, mendukung bakteri baik (prebiotik)</td>
+            <td>Konsumsi terlalu tiba-tiba dapat menyebabkan kembung; tingkatkan bertahap</td>
+            <td>Oat, psyllium husk, apel, pir, kacang-kacangan, wortel</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Serat Tidak Larut</span></td>
+            <td>Tidak berlaku</td>
+            <td>Tidak larut air; mempercepat pergerakan usus, menambah bulk feses</td>
+            <td>Mencegah sembelit, menurunkan risiko kanker kolorektal</td>
+            <td>Asupan air harus cukup; terlalu banyak tanpa air dapat memperburuk sembelit</td>
+            <td>Bekatul gandum, sayuran cruciferous, kulit buah, biji-bijian utuh</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Pati Resisten</span></td>
+            <td>Sangat rendah</td>
+            <td>Tidak dicerna di usus kecil; difermentasi bakteri usus besar</td>
+            <td>Prebiotik kuat, meningkatkan sensitivitas insulin, produksi butirat (kesehatan kolon)</td>
+            <td>Pembentukan gas pada awal konsumsi; tubuh perlu adaptasi</td>
+            <td>Nasi/kentang yang dimasak lalu didinginkan, pisang mentah, kacang-kacangan</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Fruktosa</span></td>
+            <td>Rendah (15–25)</td>
+            <td>Gula buah; dimetabolisme hampir seluruhnya di hati, tidak membutuhkan insulin</td>
+            <td>Tidak menyebabkan lonjakan gula darah; aman untuk penderita diabetes dalam jumlah moderat</td>
+            <td>Fruktosa tinggi (HFCS dari makanan olahan) berkaitan dengan perlemakan hati &amp; dislipidemia</td>
+            <td>Buah segar (baik), sirup jagung fruktosa tinggi (hindari), jus buah berlebih</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card card--soft" style="margin-top:1rem;">
+      <p>
+        <strong>Kebutuhan harian:</strong> 45–65% dari total kalori. Untuk 2.000 kkal,
+        berarti 225–325 g karbohidrat/hari. Kebutuhan serat: 25–38 g/hari (wanita 25 g, pria 38 g).
+        Prioritaskan sumber karbohidrat utuh dan batasi gula tambahan di bawah 10% total kalori
+        (rekomendasi WHO: di bawah 5% untuk manfaat optimal).
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TABEL 3: LEMAK — SUBTIPE LENGKAP
+       ============================================================ -->
+  <div class="card">
+    <h3>Lemak</h3>
+    <p>
+      Lemak bukan musuh. Lemak esensial untuk produksi hormon, penyerapan vitamin larut lemak
+      (A, D, E, K), perlindungan organ, dan fungsi membran sel. Yang membedakan adalah
+      <em>jenis</em> lemak yang dikonsumsi.
+    </p>
+    <p><strong>9 kkal per gram</strong> — densitas energi tertinggi di antara makronutrien</p>
+
+    <div class="table-wrapper">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th class="sortable">Jenis Lemak</th>
+            <th class="sortable">Struktur Kimia</th>
+            <th class="sortable">Efek pada Kesehatan</th>
+            <th class="sortable">Rekomendasi</th>
+            <th class="sortable">Sumber Utama</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag is-highlight">Lemak Tak Jenuh Tunggal (MUFA)</span></td>
+            <td>1 ikatan rangkap; cair pada suhu ruang, padat di kulkas</td>
+            <td>Menurunkan LDL, menjaga HDL, anti-inflamasi, mendukung kesehatan jantung</td>
+            <td>Dianjurkan; jadikan sumber lemak utama dalam diet</td>
+            <td>Minyak zaitun extra virgin, alpukat, kacang almond, kacang mete, minyak kanola</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Lemak Tak Jenuh Ganda (PUFA)</span></td>
+            <td>2+ ikatan rangkap; selalu cair, sensitif oksidasi &amp; panas</td>
+            <td>Menurunkan LDL dan trigliserida; Omega-3 anti-inflamasi, Omega-6 pro/anti-inflamasi tergantung rasio</td>
+            <td>Dianjurkan; jaga rasio Omega-6 : Omega-3 ≤ 4:1 (diet Barat modern bisa 15:1)</td>
+            <td>Minyak bunga matahari, minyak kedelai, kacang kenari, biji rami, ikan berlemak</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Omega-3 (ALA, EPA, DHA)</span></td>
+            <td>PUFA esensial; ALA dari nabati, EPA &amp; DHA langsung dari hewani laut</td>
+            <td>Anti-inflamasi kuat, kesehatan jantung, fungsi otak &amp; kognitif, perkembangan janin</td>
+            <td>Dianjurkan kuat; target 250–500 mg EPA+DHA/hari; ALA ≥ 1,6 g/hari (pria), 1,1 g/hari (wanita)</td>
+            <td>Salmon, sarden, makarel, tuna, biji chia, biji rami, kacang kenari, minyak ikan</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Omega-6 (LA, AA)</span></td>
+            <td>PUFA esensial; perlu dari makanan, tapi banyak orang kelebihan</td>
+            <td>Pro-inflamasi jika berlebihan tanpa diimbangi Omega-3; penting dalam jumlah seimbang</td>
+            <td>Batasi minyak olahan tinggi Omega-6; prioritaskan Omega-3 untuk menjaga keseimbangan</td>
+            <td>Minyak jagung, minyak kedelai, minyak bunga matahari, makanan olahan/goreng</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Lemak Jenuh (SFA)</span></td>
+            <td>Tidak ada ikatan rangkap; padat pada suhu ruang; stabil untuk memasak</td>
+            <td>Meningkatkan LDL; beberapa jenis (asam stearat) netral; kaitan dengan risiko kardiovaskular masih diteliti</td>
+            <td>Batasi &lt;10% total kalori (WHO); pilih sumber kualitas tinggi; tidak perlu dihindari sepenuhnya</td>
+            <td>Daging merah berlemak, mentega, minyak kelapa, santan, keju, minyak sawit</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Lemak Trans Alami (rTFA)</span></td>
+            <td>Terbentuk alami di lambung ruminansia; berbeda struktur dari trans buatan</td>
+            <td>CLA (conjugated linoleic acid) menunjukkan manfaat anti-kanker &amp; metabolik dalam penelitian</td>
+            <td>Aman dikonsumsi dalam jumlah normal dari sumber alami</td>
+            <td>Daging sapi/kambing, susu penuh lemak, mentega</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Lemak Trans Industri (iTFA)</span></td>
+            <td>Dihasilkan hidrogenasi parsial minyak nabati; struktur tidak alami bagi tubuh</td>
+            <td>Meningkatkan LDL, menurunkan HDL, pro-inflamasi kuat; risiko tertinggi untuk penyakit jantung</td>
+            <td>Hindari sepenuhnya; WHO menargetkan eliminasi global 2023; cek label "partially hydrogenated"</td>
+            <td>Margarin padat, shortening, gorengan industri, biskuit/kue kemasan (baca label!)</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">MCT (Medium-Chain Triglycerides)</span></td>
+            <td>Rantai medium (6–12 karbon); diserap langsung ke hati, tidak disimpan sebagai lemak dulu</td>
+            <td>Cepat dikonversi jadi energi/keton, populer di diet keto; efek kenyang lebih tinggi</td>
+            <td>Bermanfaat dalam konteks tertentu (epilepsi, keto); tidak ajaib untuk penurunan berat badan umum</td>
+            <td>Minyak kelapa (50% MCT), minyak MCT murni, santan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card card--soft" style="margin-top:1rem;">
+      <p>
+        <strong>Kebutuhan harian:</strong> 20–35% dari total kalori. Untuk 2.000 kkal, berarti
+        44–78 g lemak/hari. Lemak jenuh &lt;10%, trans buatan 0%, MUFA + PUFA sebisa mungkin
+        jadi sumber utama. Kolesterol makanan (sebelumnya dibatasi 300 mg/hari) kini dinilai
+        kurang berpengaruh bagi sebagian besar orang jika lemak jenuh tetap terkontrol.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TABEL 4: DISTRIBUSI & MAKRONUTRIEN KALKULATOR
+       ============================================================ -->
+  <div class="card">
+    <h3>Distribusi Makronutrien yang Direkomendasikan</h3>
+    <p>Persentase dari total kalori harian (AMDR — Acceptable Macronutrient Distribution Range).</p>
+    <div class="table-wrapper">
+      <table class="table is-striped">
+        <thead>
+          <tr>
             <th>Makronutrien</th>
-            <th>Persentase Kalori Harian</th>
+            <th>AMDR Umum</th>
+            <th>Rendah Karbo</th>
+            <th>Ketogenik</th>
+            <th>Tinggi Protein</th>
             <th>Peran Utama</th>
           </tr>
         </thead>
@@ -67,94 +362,42 @@
           <tr>
             <td><span class="tag is-highlight">Karbohidrat</span></td>
             <td>45–65%</td>
-            <td>Sumber energi utama.</td>
+            <td>20–45%</td>
+            <td>&lt;10% (20–50g)</td>
+            <td>30–50%</td>
+            <td>Energi utama, bahan bakar otak &amp; otot</td>
           </tr>
-
           <tr>
             <td><span class="tag is-highlight">Protein</span></td>
             <td>10–35%</td>
-            <td>Pemeliharaan dan pertumbuhan jaringan tubuh.</td>
+            <td>25–40%</td>
+            <td>15–30%</td>
+            <td>30–40%</td>
+            <td>Pembangunan &amp; perbaikan jaringan, enzim, hormon</td>
           </tr>
-
           <tr>
             <td><span class="tag is-highlight">Lemak</span></td>
             <td>20–35%</td>
-            <td>Produksi hormon dan fungsi sel.</td>
+            <td>30–50%</td>
+            <td>60–75%</td>
+            <td>20–35%</td>
+            <td>Hormon, vitamin larut lemak, fungsi sel &amp; otak</td>
           </tr>
         </tbody>
       </table>
     </div>
-
   </div>
 
+  <!-- ============================================================
+       TABEL 5: MENGHITUNG DARI TDEE
+       ============================================================ -->
   <div class="card">
-
-    <h3>Kebutuhan Protein Berdasarkan Usia dan Aktivitas</h3>
-
-    <p>
-      Protein merupakan makronutrien yang kebutuhannya paling dipengaruhi
-      oleh usia, berat badan, dan tingkat aktivitas fisik.
-    </p>
-
-    <div class="table-wrapper">
-      <table class="table is-striped">
-        <thead>
-          <tr>
-            <th>Kelompok</th>
-            <th>Rekomendasi Protein</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Anak (4–13 tahun)</td>
-            <td>0,95 g / kg berat badan</td>
-          </tr>
-
-          <tr>
-            <td>Remaja (14–18 tahun)</td>
-            <td>0,85 g / kg berat badan</td>
-          </tr>
-
-          <tr>
-            <td>Pria &amp; Wanita Dewasa</td>
-            <td>0,8 g / kg berat badan</td>
-          </tr>
-
-          <tr>
-            <td>Olahraga Rekreasi</td>
-            <td>1,2–1,6 g / kg berat badan</td>
-          </tr>
-
-          <tr>
-            <td>Latihan Beban Intensif</td>
-            <td>1,6–2,2 g / kg berat badan</td>
-          </tr>
-
-          <tr>
-            <td>Lansia (&gt; 65 tahun)</td>
-            <td>1,0–1,2 g / kg berat badan</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-  <div class="card">
-
     <h3>Menghitung Makronutrien dari TDEE</h3>
-
-    <p>
-      Setelah memperoleh TDEE, kalori dapat dikonversi menjadi gram
-      makronutrien menggunakan nilai energi masing-masing.
-    </p>
-
     <p>
       Contoh perhitungan untuk TDEE <strong>2.500 kkal</strong> dengan distribusi
-      <strong>50% karbohidrat</strong>, <strong>25% protein</strong>, dan
+      seimbang: <strong>50% karbohidrat</strong>, <strong>25% protein</strong>,
       <strong>25% lemak</strong>.
     </p>
-
     <div class="table-wrapper">
       <table class="table is-striped">
         <thead>
@@ -162,8 +405,8 @@
             <th>Makronutrien</th>
             <th>Persentase</th>
             <th>Kalori</th>
-            <th>Perhitungan</th>
-            <th>Hasil</th>
+            <th>Konversi</th>
+            <th>Hasil (gram)</th>
           </tr>
         </thead>
         <tbody>
@@ -172,28 +415,319 @@
             <td>50%</td>
             <td>1.250 kkal</td>
             <td>1.250 ÷ 4</td>
-            <td>313 g</td>
+            <td><strong>313 g</strong></td>
           </tr>
-
           <tr>
             <td><span class="tag is-highlight">Protein</span></td>
             <td>25%</td>
             <td>625 kkal</td>
             <td>625 ÷ 4</td>
-            <td>156 g</td>
+            <td><strong>156 g</strong></td>
           </tr>
-
           <tr>
             <td><span class="tag is-highlight">Lemak</span></td>
             <td>25%</td>
             <td>625 kkal</td>
             <td>625 ÷ 9</td>
-            <td>69 g</td>
+            <td><strong>69 g</strong></td>
           </tr>
         </tbody>
       </table>
     </div>
-
-
+    <p style="margin-top:0.75rem; font-size:0.85rem; opacity:0.7;">
+      Nilai energi: Karbohidrat = 4 kkal/g · Protein = 4 kkal/g · Lemak = 9 kkal/g · Alkohol = 7 kkal/g (tidak direkomendasikan sebagai sumber energi)
+    </p>
   </div>
+
+  <!-- ============================================================
+       TABEL 6: POLA MAKAN
+       ============================================================ -->
+  <div class="card">
+    <h3>Pola Makan Umum &amp; Karakteristik Makronutriennya</h3>
+    <div class="table-wrapper">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th class="sortable">Pola Makan</th>
+            <th class="sortable">Karbo</th>
+            <th class="sortable">Protein</th>
+            <th class="sortable">Lemak</th>
+            <th>Fokus &amp; Cocok Untuk</th>
+            <th>Perhatian</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Diet Seimbang (AMDR)</td>
+            <td>45–65%</td>
+            <td>10–35%</td>
+            <td>20–35%</td>
+            <td>Kesehatan umum &amp; keberlanjutan jangka panjang; cocok untuk hampir semua orang</td>
+            <td>Tidak spesifik untuk tujuan tertentu (mis. hypertrophy agresif)</td>
+          </tr>
+          <tr>
+            <td>Diet Mediterania</td>
+            <td>50–60%</td>
+            <td>15–20%</td>
+            <td>25–35%</td>
+            <td>Kesehatan jantung, umur panjang; bukti ilmiah paling kuat</td>
+            <td>Bahan segar bisa mahal; tidak familiar di beberapa budaya</td>
+          </tr>
+          <tr>
+            <td>Vegetarian / Vegan</td>
+            <td>50–60%</td>
+            <td>10–20%</td>
+            <td>20–30%</td>
+            <td>Etika, lingkungan, kesehatan; mengurangi risiko penyakit kronis</td>
+            <td>Perlu suplemen B12, Omega-3, Zat Besi, Zinc, Yodium; perhatikan protein lengkap</td>
+          </tr>
+          <tr>
+            <td>Rendah Karbohidrat</td>
+            <td>20–40%</td>
+            <td>25–35%</td>
+            <td>30–45%</td>
+            <td>Kontrol gula darah, diabetes tipe 2, penurunan berat badan</td>
+            <td>Beberapa orang merasa lemas di awal; kepatuhan jangka panjang bervariasi</td>
+          </tr>
+          <tr>
+            <td>Ketogenik (Keto)</td>
+            <td>&lt;10%</td>
+            <td>15–30%</td>
+            <td>60–75%</td>
+            <td>Epilepsi (bukti kuat), penurunan berat badan cepat awal, keto flu perlu diantisipasi</td>
+            <td>Sulit dipertahankan; risiko dislipidemia pada sebagian orang; batasi sumber lemak jenuh</td>
+          </tr>
+          <tr>
+            <td>Tinggi Protein</td>
+            <td>30–45%</td>
+            <td>30–40%</td>
+            <td>20–30%</td>
+            <td>Hypertrophy, rekomposisi tubuh, kenyang tinggi; cocok atlet &amp; lansia aktif</td>
+            <td>Beban ginjal meningkat pada penderita gangguan ginjal; kebutuhan air lebih tinggi</td>
+          </tr>
+          <tr>
+            <td>Karnivora</td>
+            <td>~0%</td>
+            <td>30–40%</td>
+            <td>60–70%</td>
+            <td>Eksperimental; diklaim mengurangi peradangan autoimun oleh pengguna</td>
+            <td>Bukti ilmiah sangat terbatas; risiko defisiensi serat, Vitamin C, folat; tidak dianjurkan umum</td>
+          </tr>
+          <tr>
+            <td>Intermittent Fasting (IF)</td>
+            <td>Bervariasi</td>
+            <td>Bervariasi</td>
+            <td>Bervariasi</td>
+            <td>Strategi <em>timing</em> makan, bukan komposisi makronutrien; mendukung defisit kalori</td>
+            <td>Distribusi makronutrien tetap harus diperhatikan dalam window makan; tidak cocok semua orang</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TABEL 7: KUALITAS vs KUANTITAS
+       ============================================================ -->
+  <div class="card">
+    <h3>Kualitas vs Kuantitas Makronutrien</h3>
+    <p>
+      Angka gram dan persentase bukan satu-satunya penentu kualitas diet.
+      Sumber makanan yang dipilih mempengaruhi respons metabolik, rasa kenyang, dan
+      kandungan mikronutrien yang menyertainya.
+    </p>
+    <div class="table-wrapper">
+      <table class="table is-striped">
+        <thead>
+          <tr>
+            <th>Makronutrien</th>
+            <th>Pilihan Lebih Baik</th>
+            <th>Pilihan Lebih Buruk</th>
+            <th>Alasan Utama</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag is-highlight">Karbohidrat</span></td>
+            <td>Beras merah, oat, ubi, quinoa, kacang-kacangan, buah utuh</td>
+            <td>Nasi putih berlebih, roti putih, minuman manis, kue kemasan</td>
+            <td>Karbohidrat utuh lebih kaya serat, vitamin, dan mineral; IG lebih rendah</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Protein</span></td>
+            <td>Ikan, ayam tanpa kulit, telur, tahu, tempe, kacang-kacangan</td>
+            <td>Daging olahan (sosis, nugget, bacon), daging merah berlebih</td>
+            <td>Daging olahan terkait risiko kardiovaskular &amp; kanker; protein utuh lebih bersih</td>
+          </tr>
+          <tr>
+            <td><span class="tag is-highlight">Lemak</span></td>
+            <td>Minyak zaitun, alpukat, ikan berlemak, kacang-kacangan, biji-bijian</td>
+            <td>Margarin, shortening, minyak goreng bekas, makanan ultra-proses</td>
+            <td>MUFA &amp; Omega-3 protektif; lemak trans industri merusak profil lipid</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PENUTUP -->
+  <div class="card card--soft">
+    <blockquote>
+      Tidak ada satu pola makan yang otomatis terbaik untuk semua orang. Gunakan
+      perhitungan BMR, TDEE, dan distribusi makronutrien sebagai fondasi — lalu sesuaikan
+      dengan tujuan (defisit/surplus kalori, performa, kesehatan metabolik), preferensi rasa,
+      kondisi kesehatan, anggaran, dan kemampuan konsistensi. Perubahan bertahap yang
+      berkelanjutan selalu lebih efektif daripada perubahan ekstrem yang sulit dipertahankan.
+    </blockquote>
+  </div>
+
 </div>
+
+<!-- ============================================================
+     SCRIPT: Table Interaction (Sort + Filter via .tag)
+     Sumber: skill table interaction
+     ============================================================ -->
+<script>
+(() => {
+
+  const table = document.querySelector("table");
+  if (!table) return;
+
+  const tbody = table.querySelector("tbody");
+  let rows = [...tbody.querySelectorAll("tr")];
+  const tabs = [...document.querySelectorAll(".tag")];
+  const headers = [...table.querySelectorAll("th.sortable")];
+
+  let selectedRowIndex = -1;
+  let currentSort = { index: 0, direction: "asc" };
+  let currentFilter = "all";
+
+  function refreshRows() {
+    rows = [...tbody.querySelectorAll("tr")];
+  }
+
+  function getCellValue(row, index) {
+    return row.children[index]?.innerText.trim().toLowerCase() || "";
+  }
+
+  function getVisibleRows() {
+    return rows.filter(row => row.style.display !== "none");
+  }
+
+  function sortTable(index, direction = "asc") {
+    refreshRows();
+    const sorted = [...rows].sort((a, b) => {
+      const A = getCellValue(a, index);
+      const B = getCellValue(b, index);
+      const isNumeric = !isNaN(A) && !isNaN(B);
+      if (isNumeric) {
+        return direction === "asc" ? Number(A) - Number(B) : Number(B) - Number(A);
+      }
+      return direction === "asc" ? A.localeCompare(B) : B.localeCompare(A);
+    });
+    tbody.innerHTML = "";
+    sorted.forEach(row => tbody.appendChild(row));
+    refreshRows();
+  }
+
+  headers.forEach((header, index) => {
+    header.addEventListener("click", () => {
+      headers.forEach(th => th.classList.remove("asc", "desc"));
+      const direction =
+        currentSort.index === index && currentSort.direction === "asc" ? "desc" : "asc";
+      currentSort = { index, direction };
+      header.classList.add(direction);
+      sortTable(index, direction);
+    });
+  });
+
+  function applyFilter(filter) {
+    currentFilter = filter;
+    rows.forEach(row => {
+      const category = row.dataset.category || "";
+      const level = row.dataset.level || "";
+      let visible = false;
+      if (filter === "all") visible = true;
+      else if (category === filter || level === filter) visible = true;
+      row.style.display = visible ? "" : "none";
+    });
+    selectedRowIndex = -1;
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(btn => btn.classList.remove("active"));
+      tab.classList.add("active");
+      applyFilter(tab.dataset.filter || "all");
+    });
+  });
+
+  function clearSelection() {
+    rows.forEach(row => row.classList.remove("selected"));
+  }
+
+  function selectRow(index) {
+    const visibleRows = getVisibleRows();
+    const row = visibleRows[index];
+    if (!row) return;
+    clearSelection();
+    row.classList.add("selected");
+    selectedRowIndex = index;
+    row.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+
+  function bindRowEvents() {
+    refreshRows();
+    rows.forEach(row => {
+      row.setAttribute("tabindex", "0");
+      row.addEventListener("click", () => {
+        const visibleRows = getVisibleRows();
+        const index = visibleRows.indexOf(row);
+        selectRow(index);
+      });
+      row.addEventListener("dblclick", () => {
+        console.log("Open detail:", row.children[0]?.innerText);
+      });
+    });
+  }
+
+  bindRowEvents();
+
+  document.addEventListener("keydown", (e) => {
+    const active = document.activeElement.tagName;
+    if (active === "INPUT" || active === "TEXTAREA" || active === "SELECT") return;
+    const visibleRows = getVisibleRows();
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        selectedRowIndex = Math.min(selectedRowIndex + 1, visibleRows.length - 1);
+        selectRow(selectedRowIndex);
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        selectedRowIndex = Math.max(selectedRowIndex - 1, 0);
+        break;
+      case "Escape":
+        clearSelection();
+        selectedRowIndex = -1;
+        break;
+      case "Enter":
+        if (selectedRowIndex >= 0 && visibleRows[selectedRowIndex]) {
+          visibleRows[selectedRowIndex].dispatchEvent(new Event("dblclick"));
+        }
+        break;
+    }
+  });
+
+  sortTable(currentSort.index, currentSort.direction);
+  if (headers[0]) headers[0].classList.add("asc");
+
+  document.body.addEventListener("htmx:afterSwap", () => {
+    refreshRows();
+    bindRowEvents();
+    applyFilter(currentFilter);
+    sortTable(currentSort.index, currentSort.direction);
+  });
+
+})();
+</script>
